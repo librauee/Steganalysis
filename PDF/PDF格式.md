@@ -127,10 +127,13 @@ end obj
      F	|文件标识	|（可选)保存stream数据的文件。如果有这个字段， stream和endstream就被忽略，FFilter将会代替Filter, FDecodeParms将代替DecodeParms。Length字段还是表示stream和endstream之间数据的长度，但是通常此刻已经没有数据了，长度是0.
      FFilter	|名字 或 字典|	(可选)和filter类似，针对外部文件。
      FDecodeParms	|字典 或 数组|	(可选)和DecodeParams类似，针对外部文件。
-     Stream的编码算法名称（列表）。如果有多个，则数组中的编码算法列表顺序就是数据被编码的顺序。且需要被编码。编码算法主要如下：
+     
+   
+   
+Stream的编码算法名称（列表）。如果有多个，则数组中的编码算法列表顺序就是数据被编码的顺序。且需要被编码。编码算法主要如下：
      ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190526185703968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x5YzQ0ODEzNDE4,size_16,color_FFFFFF,t_70)
-     编码可视化主要显示为乱码，所以提供了隐藏信息的机会,如下图的steam内容为乱码。
-     ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190526185800381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x5YzQ0ODEzNDE4,size_16,color_FFFFFF,t_70#pic_center)
+编码可视化主要显示为乱码，所以提供了隐藏信息的机会,如下图的steam内容为乱码。
+     ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190526185800381.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2x5YzQ0ODEzNDE4,size_16,color_FFFFFF,t_70#pic_center)   
     * **NULL**
     用null表示，代表空。如果一个key的值为null，则这个key可以被忽略；如果引用一个不存在的object则等价于引用一个空对象。
 
