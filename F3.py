@@ -53,8 +53,8 @@ if __name__=="__main__":
     f3.set_sequence_after_dct(sequence_after_dct)
     info1=[0,1,0,1,1,0,1,0]
     f3.write(info1)
-    sequence_after_dct2=f3.get_sequence_after_dct()
     # 读
+    sequence_after_dct2=f3.get_sequence_after_dct()    
     f3.set_sequence_after_dct(sequence_after_dct2)
     info2=f3.read()
     print (info2)
