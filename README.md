@@ -11,6 +11,13 @@
 
 [代码实现](https://github.com/librauee/Staganalysis/tree/master/LSB)
 
+![Image text](https://raw.githubusercontent.com/librauee/Staganalysis/master/picture/old.png#pic_center)  
+嵌入信息前的载体图片
+
+![Image text](https://raw.githubusercontent.com/librauee/Staganalysis/master/picture/new.png#pic_center)
+嵌入信息后的载体图片
+
+
 # 变换域编码图像
 
 ## JPEG
@@ -35,9 +42,9 @@
 * 为了改善大量DCT系数不隐藏信息这一状况，人们提出了F3隐写
 * F3对原始值为+1和-1的DCT系数，进行了利用。F3隐写的规则如下
 
-(1) 每个非0的DCT数据用于隐藏1比特秘密信息，为0的DCT系数不负载秘密信息。
-(2) 如果秘密信息与DCT的LSB相同，便不作改动；如果不同，将DCT系数的绝对值减小1，符号不变。
-(3) 当原始值为+1或-1且预嵌入秘密信息为0时，将这个位置归0并视为无效，在下一个DCT系数上重新嵌入。
+1. 每个非0的DCT数据用于隐藏1比特秘密信息，为0的DCT系数不负载秘密信息
+2. 如果秘密信息与DCT的LSB相同，便不作改动；如果不同，将DCT系数的绝对值减小1，符号不变
+3. 当原始值为+1或-1且预嵌入秘密信息为0时，将这个位置归0并视为无效，在下一个DCT系数上重新嵌入
 
 ### F4隐写
 
