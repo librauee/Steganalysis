@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 
 
-img = cv2.imread('ball.jpg', 0)
+img = cv2.imread('a.png',0)
 img1 = img.astype('float')
  
 def dct(m):
@@ -18,9 +18,14 @@ def dct(m):
     return cv2.dct(m)*255
 #print(dct(img1).shape)
 new_dct=dct(img1)
+after_dct=[]
 for i in range(len(new_dct)):
     for j in range(len(new_dct[0])):
-        new_dct[i][j]=int(new_dct[i][j]/1000)
+        after_dct.append(int(new_dct[i][j]))
 #print(new_dct)
-new_dct=new_dct.reshape(-1,1)
-print(new_dct.shape)
+#new_dct=new_dct.reshape(-1,1)
+#print(len(after_dct))
+#print(after_dct[:600])
+
+
+    
