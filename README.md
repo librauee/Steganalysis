@@ -39,7 +39,7 @@
 1. DCT系数中“0”的比例最大（一般可达到60%以上，取决于图像质量和压缩因子），压缩编码是利用大量出现连零实现的，如果改变DCT系数中“0”的话，不能很好的实现压缩
 2. DCT系数中的“1”若变成“0”，由于接受端无法区分未使用的“0”和嵌入消息后得到的“0”，从而无法实现秘密信息的提取
 
-[代码实现](https://github.com/librauee/Staganalysis/tree/master/LSB)
+[代码实现](https://github.com/librauee/Staganalysis/blob/master/Jsteg.py)
 ### F3隐写
 * 为了改善大量DCT系数不隐藏信息这一状况，人们提出了F3隐写
 * F3对原始值为+1和-1的DCT系数，进行了利用。F3隐写的规则如下
@@ -49,7 +49,7 @@
 3. 当原始值为+1或-1且预嵌入秘密信息为0时，将这个位置归0并视为无效，在下一个DCT系数上重新嵌入
 
 * 编写代码实现嵌入，并观察DCT系数变化
-[代码实现](https://github.com/librauee/Staganalysis/tree/master/LSB)
+[代码实现](https://github.com/librauee/Staganalysis/blob/master/F3.py)
 ```
 JPEG的DCT系数
 {0: 32939, 1: 15730, 2: 13427, 3: 11523, 4: 9540, 5: 7957, 6: 6607, 7: 5697, 8: 4834, -1: 15294, -2: 13637, -3: 11479, -4: 9683, -5: 7979, -6: 6878, -7: 5631, -8: 4871}
@@ -86,7 +86,7 @@ F4steg begin writing!
 * 为了克服F3的缺陷，F4对不同正负号的奇偶系数采用了不同的嵌入与消息表示方法
 * **F4用负偶数、正奇数代表嵌入了消息比特1，用负奇数、正偶数代表嵌入了0**
 * 但仍然通过减小绝对值的方法进行修改，如果减小绝对值后系数为0则继续往下嵌入当前比特 
-
+* [代码实现](https://github.com/librauee/Staganalysis/blob/master/F4.py)
 ![Image text](https://raw.githubusercontent.com/librauee/Staganalysis/master/picture/F4.png#pic_center) 
 * F4隐写的DCT系数
   * F4显然保持了载体分布函数的对称性，也保持了载体分布函数的单调性与梯度下降性
