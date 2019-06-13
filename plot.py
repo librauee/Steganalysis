@@ -16,6 +16,7 @@ a={0: 32939, 1: 15730, 2: 13427, 3: 11523, 4: 9540, 5: 7957, 6: 6607, 7: 5697, 8
 plt.bar(a.keys(),a.values(),color=['black'],align='center')
 plt.xticks((0,1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8),('0','1','2','3','4','5','6','7','8','-1','-2','-3','-4','-5','-6','-7','-8'))
 plt.title('original coefficient')
+plt.savefig('original.png')
 plt.show()
 
 b={0: 32939, 1: 15730, 2: 12552, 3: 12398, 4: 8739, 5: 8758, 6: 6165, 7: 6139, 8: 4487, -1: 15294, -2: 12721, -3: 12395, -4: 8891, -5: 8771, -6: 6319, -7: 6190, -8: 4463}
@@ -24,14 +25,18 @@ d={0: 59320, 1: 13618, 2: 11987, 3: 9875, 4: 8328, 5: 6860, 6: 5883, 7: 4910, 8:
 plt.bar(b.keys(),b.values(),color=['black'],align='center')
 plt.xticks((0,1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8),('0','1','2','3','4','5','6','7','8','-1','-2','-3','-4','-5','-6','-7','-8'))
 plt.title('after Jsteg coefficient')
+plt.savefig('Jsteg.png')
 plt.show()
 
 # 黑色嵌入1，白色嵌入0
 plt.bar(c.keys(),c.values(),color=['black'],align='center')
 plt.xticks((0,1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8),('0','1','2','3','4','5','6','7','8','-1','-2','-3','-4','-5','-6','-7','-8'))
 plt.title('after F3 coefficient')
+plt.savefig('F3.png')
 plt.show()
+
 plt.bar(d.keys(),d.values(),color=['grey','black','white','black','white','black','white','black','white','white','black','white','black','white','black','white','black'],align='center')
 plt.xticks((0,1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8),('0','1','2','3','4','5','6','7','8','-1','-2','-3','-4','-5','-6','-7','-8'))
 plt.title('after F4 coefficient')
+plt.savefig('F4.png')
 plt.show()
