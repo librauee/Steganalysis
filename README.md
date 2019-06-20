@@ -27,7 +27,8 @@ Graphics）均支持光栅格式与调色板格式编码，对这两种格式
 
 ## JPEG
 * Joint Photographic Experts Group（联合图像专家小组）的缩写
-
+* JPEG编码
+![Image text](https://github.com/librauee/Steganalysis/blob/master/picture/Jpegprocess.png)
 ### JSteg隐写
 * JSteg的算法的主要思想是将秘密消息嵌入在量化后的DCT系数的最低比特位上，但对原始值为0、+1、-1的DCT系数不进行嵌入，提取秘密消息时，只需将载密图像中不等于0、l的量化DCT系数的LSB取出即可
 * JSteg算法步骤 
