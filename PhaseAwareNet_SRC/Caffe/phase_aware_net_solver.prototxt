@@ -1,0 +1,17 @@
+train_net: "/tmp/tmpNMRrso"
+test_net: "/tmp/tmpwTrC5X"
+test_iter: 1
+test_interval: 1000000
+base_lr: 0.0010000000475
+display: 10
+max_iter: 1000000
+lr_policy: "step"
+gamma: 0.75
+momentum: 0.899999976158
+weight_decay: 0.00999999977648
+stepsize: 6000
+snapshot: 6000
+snapshot_prefix: "/home/mchen/tmp/caffe/examples/PhaseAwareNet"
+solver_mode: GPU
+iter_size: 1
+type: "SGD"
